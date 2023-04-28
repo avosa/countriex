@@ -14,7 +14,7 @@ countriex = "0.1.0"
 Then, import the library into your Rust code using the `use` keyword:
 
 ```rust
-use countriex::{all_countries, find_country_by_alpha2};
+use countriex::{all, get_by, filter};
 ```
 
 ## Examples
