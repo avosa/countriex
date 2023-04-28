@@ -2,6 +2,9 @@
 name = "countriex"
 version = "0.1.0"
 edition = "2021"
+description = "Countriex is a Rust library that provides information about countries around the world. It includes data on a wide range of topics, including population, location, and official languages. It includes data from ISO 3166 (countries and states/subdivisions), ISO 4217 (currency), and E.164 (phone numbers)."
+authors = ["Webster Avosa <webster@webstercodes.online>"]
+license = "MIT"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
