@@ -1,22 +1,3 @@
-// use serde::{Deserialize, Serialize};
-// use std::collections::HashMap;
-
-// #[derive(Debug, Serialize, Deserialize, Clone)]
-// pub struct Country {
-//     pub address_format: Option<String>,
-//     pub alpha2: String,
-//     pub alpha3: String,
-//     pub continent: String,
-//     pub country_code: String,
-//     pub currency_code: String,
-//     pub name: String,
-//     pub world_region: Option<String>,
-// }
-
-
-// pub type Countries = HashMap<String, Country>;
-
-
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 
