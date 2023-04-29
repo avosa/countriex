@@ -8,7 +8,13 @@ To use the Countriex library in your Rust project, add the following line to you
 
 ```toml
 [dependencies]
-countriex = "0.1.0"
+countriex = "0.1.1"
+```
+
+Or install it directly as:
+
+```bash
+cargo add countriex
 ```
 
 Then, import the library into your Rust code using the `use` keyword:
