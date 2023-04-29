@@ -25,7 +25,7 @@ use countriex::{all, get_by, filter};
 fn main() {
     // Get the total number of countries
     let total_countries = all();
-    println!("Number of countries: {}", total_countries);
+    println!("Number of countries: {:?}", total_countries);
 
     // Find a country by its 2-letter ISO code (alpha2)
     let country_alpha2 = get_by("alpha2", "US");

@@ -1,23 +1,22 @@
-mod data;
-mod models;
+pub mod data;
+pub mod models;
 
-use serde_json;
-// use std::collections::HashMap;
-use data::DATA_JSON;
+use serde_yaml;
+use data::DATA_YAML;
 use models::{Countries, Country};
 
-pub fn all() -> usize {
-    let countries: Countries = serde_json::from_str(DATA_JSON).expect("Failed to parse JSON data");
-    countries.len()
+pub fn all() -> Vec<Country> {
+    let countries: Countries = serde_yaml::from_str(DATA_YAML).expect("Failed to parse YAML data");
+    countries.values().cloned().collect()
 }
 
 pub fn get_by(key: &str, value: &str) -> Option<Country> {
-    let countries: Countries = serde_json::from_str(DATA_JSON).expect("Failed to parse JSON data");
+    let countries: Countries = serde_yaml::from_str(DATA_YAML).expect("Failed to parse YAML data");
     countries.values().find(|country| matches(country, key, value)).cloned()
 }
 
 pub fn filter(key: &str, value: &str) -> Vec<Country> {
-    let countries: Countries = serde_json::from_str(DATA_JSON).expect("Failed to parse JSON data");
+    let countries: Countries = serde_yaml::from_str(DATA_YAML).expect("Failed to parse YAML data");
     countries.values().filter(|country| matches(country, key, value)).cloned().collect()
 }
 
@@ -26,7 +25,6 @@ fn matches(country: &Country, key: &str, value: &str) -> bool {
         "alpha2" => country.alpha2 == value,
         "alpha3" => country.alpha3 == value,
         "continent" => country.continent == value,
-        // "country_code" => country.country_code == value,
         "currency_code" => country.currency_code.as_ref().map_or(false, |s| s == value),
         "name" => country.name == value,
         "region" => country.region.as_ref().map_or(false, |s| s == value),
