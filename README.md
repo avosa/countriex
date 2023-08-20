@@ -70,4 +70,4 @@ Countriex provides the following functions:
 
 ## Credits
 
-This library uses data from the [restcountries](https://restcountries.com/) API.
+This library uses data from the [restcountries](https://restcountries.com/) API and is inspired by Ruby's [countriex](https://github.com/navinpeiris/countriex).
